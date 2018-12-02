@@ -1,0 +1,8 @@
+Installation:
+
+	git clone git://github.com/qmacro/dotvim.git ~/.vim
+
+Create symlinks:
+
+	ls -s ~/dotfiles/vimrc ~/.vimrc
+	ls -s ~/dotfiles/gvimrc ~/.gvimrc
