@@ -1,6 +1,6 @@
 Installation:
 
-    git clone git://github.com/qmacro/dotvim.git ~/.vim
+    git clone https://github.com/qmacro/dotvim.git ~/.vim
 
 Create symlinks:
 
