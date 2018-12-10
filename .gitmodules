@@ -19,3 +19,9 @@
 [submodule "bundle/test"]
 	path = bundle/test
 	url = https://github.com/janko-m/vim-test.git
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/repeat"]
+	path = bundle/repeat
+	url = https://github.com/tpope/vim-repeat.git
