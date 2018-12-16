@@ -15,6 +15,16 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
+" Disables automatic commenting on newline
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Shortcutting split navigation, saves a keypress
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+
 " When in insert mode, jump to next <++> marker (see helpers later)
 inoremap qq <Esc>/<++><CR>"_c4l
 nnoremap rr :so $MYVIMRC<Enter>
