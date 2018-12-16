@@ -1,7 +1,9 @@
 execute pathogen#infect()
+set nocompatible
 syntax on
 filetype plugin indent on
 colorscheme dracula
+set encoding=utf-8
 set ts=4
 set shiftwidth=4
 set number relativenumber
