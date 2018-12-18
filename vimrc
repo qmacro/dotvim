@@ -39,6 +39,8 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Remap Esc to save wear on left hand!
+:inoremap jk <esc>
 
 " When in insert mode, jump to next <++> marker (see helpers later)
 inoremap qq <Esc>/<++><CR>"_c4l
