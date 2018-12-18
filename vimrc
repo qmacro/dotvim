@@ -20,6 +20,9 @@ nmap <silent> t<C-g> :TestVisit<CR>
 " Disables automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" Automatically turn on auto-save for markdown files (so I can live preview them)
+autocmd FileType markdown let g:auto_save = 1
+
 " Integrate Limelight with Goyo
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
