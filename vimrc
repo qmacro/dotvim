@@ -27,7 +27,7 @@ noremap <Right> <nop>
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Automatically turn on auto-save for markdown files (so I can live preview them)
-autocmd FileType markdown let g:auto_save = 1
+autocmd FileType markdown let g:auto_save = 0
 
 " Integrate Limelight with Goyo
 autocmd! User GoyoEnter Limelight
