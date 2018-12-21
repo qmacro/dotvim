@@ -8,6 +8,7 @@ set ts=4
 set shiftwidth=4
 set number relativenumber
 set splitbelow splitright
+set linebreak
 
 let mapleader = ","
 
@@ -43,7 +44,7 @@ map <C-l> <C-w>l
 :inoremap jk <esc>
 
 " When in insert mode, jump to next <++> marker (see helpers later)
-inoremap qq <Esc>/<++><CR>"_c4l
+inoremap ++ <Esc>/<++><CR>"_c4l
 
 " Edit and source .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -59,7 +60,7 @@ autocmd Filetype markdown inoremap ,b ****<++><Esc>F*hi
 autocmd Filetype markdown inoremap ,s ~~~~<++><Esc>F~hi
 autocmd Filetype markdown inoremap ,e **<++><Esc>F*i
 autocmd Filetype markdown inoremap ,i ![](<++>)<++><Esc>F[a
-autocmd Filetype markdown inoremap ,a [](<++>)<++><Esc>F[a
+autocmd Filetype markdown inoremap ,a [](<++>) <++><Esc>F[a
 autocmd Filetype markdown inoremap ,1 #<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap ,2 ##<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap ,3 ###<Space><Enter><++><Esc>kA
