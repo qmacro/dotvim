@@ -27,6 +27,8 @@ noremap <Right> <nop>
 " Disables automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+nnoremap <leader>nn :NERDTreeToggle<cr>
+
 " Automatically turn on auto-save for markdown files (so I can live preview them)
 autocmd FileType markdown let g:auto_save = 0
 
@@ -60,7 +62,7 @@ autocmd Filetype markdown inoremap ,b ****<++><Esc>F*hi
 autocmd Filetype markdown inoremap ,s ~~~~<++><Esc>F~hi
 autocmd Filetype markdown inoremap ,e **<++><Esc>F*i
 autocmd Filetype markdown inoremap ,i ![](<++>)<++><Esc>F[a
-autocmd Filetype markdown inoremap ,a [](<++>) <++><Esc>F[a
+autocmd Filetype markdown inoremap ,a [](<++>)<++><Esc>F[a
 autocmd Filetype markdown inoremap ,1 #<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap ,2 ##<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap ,3 ###<Space><Enter><++><Esc>kA
