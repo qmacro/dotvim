@@ -2,6 +2,10 @@ execute pathogen#infect()
 set nocompatible
 syntax on
 filetype plugin indent on
+
+" Fix broken colorscheme (see https://github.com/dracula/vim/issues/65)
+let g:dracula_italic=0
+
 colorscheme dracula
 set encoding=utf-8
 set ts=4
