@@ -75,3 +75,4 @@ autocmd Filetype markdown inoremap ,3 ###<Space><Enter><++><Esc>kA
 iabbrev scp SAP Cloud Platform
 iabbrev s4h S/4HANA
 iabbrev sbs side-by-side
+iabbrev s4s S/4HANA Cloud SDK
