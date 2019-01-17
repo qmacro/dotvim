@@ -32,6 +32,7 @@ noremap <Right> <nop>
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 nnoremap <leader>nn :NERDTreeToggle<cr>
+nnoremap <leader>w :w<cr>
 
 " Automatically turn on auto-save for markdown files (so I can live preview them)
 autocmd FileType markdown let g:auto_save = 0
@@ -50,7 +51,7 @@ map <C-l> <C-w>l
 :inoremap jk <esc>
 
 " When in insert mode, jump to next <++> marker (see helpers later)
-inoremap ++ <Esc>/<++><CR>"_c4l
+inoremap qq <Esc>/<++><CR>"_c4l
 
 " Edit and source .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
