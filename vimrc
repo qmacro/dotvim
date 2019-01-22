@@ -34,10 +34,11 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Use of NERDTree (setting the NodeDelimiter fixes a recent issue with ^G displaying ... see
 " https://www.reddit.com/r/vim/comments/a4yzyt/g_characters_prefixing_directory_and_file_names/
 " for details of problem and fix).
-nnoremap <leader>nn :NERDTreeToggle<cr>
+nnoremap <leader>n :NERDTreeToggle<cr>
 let g:NERDTreeNodeDelimiter = "\u00a0"
 
 nnoremap <leader>w :w<cr>
+nnoremap <leader>q :q<cr>
 
 " Automatically turn on auto-save for markdown files (so I can live preview them)
 autocmd FileType markdown let g:auto_save = 0
