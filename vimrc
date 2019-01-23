@@ -66,6 +66,9 @@ nnoremap <leader>sv :so $MYVIMRC<cr>
 " Remove all trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
+" Check leading whitespace
+set listchars=tab:▸·,eol:¬
+nnoremap <leader>l :set list!<cr>
 
 " Markdown helpers
 autocmd Filetype markdown inoremap ,n ---<Enter><Enter>
