@@ -37,3 +37,6 @@
 [submodule "bundle/codi"]
 	path = bundle/codi
 	url = https://github.com/metakirby5/codi.vim.git
+[submodule "bundle/editorconfig"]
+	path = bundle/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim.git
