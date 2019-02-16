@@ -86,3 +86,19 @@ iabbrev scp SAP Cloud Platform
 iabbrev s4h S/4HANA
 iabbrev sbs side-by-side
 iabbrev s4s S/4HANA Cloud SDK
+
+" Experimental - LSP
+"	\ 'javascript': ['tcp://127.0.0.1:2089']
+set runtimepath+=~/.vim-plugins/LanguageClient-neovim
+set hidden
+autocmd BufRead,BufNewFile *.cds setfiletype cds
+let g:LanguageClient_serverCommands = {
+	\ 'cds': ['/Users/i347491/.vim-plugins/LanguageClient-neovim/startcdslsp']
+	\ }
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
+nnoremap <leader><tab> :tabnext<cr>
