@@ -90,3 +90,11 @@ iabbrev s4s S/4HANA Cloud SDK
 " To enable project/folder specific vimrc settings
 " (see https://andrew.stwrt.ca/posts/project-specific-vimrc/)
 set exrc
+
+set runtimepath+=~/.vim/bundle/languageclient
+set hidden
+autocmd BufRead,BufNewFile *.cds setfiletype cds
+set signcolumn=yes
+let g:LanguageClient_serverCommands = {
+	\ 'cds': ['/Users/i347491/.vim/bundle/languageclient/startcdslsp']
+	\ }
