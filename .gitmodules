@@ -46,3 +46,4 @@
 [submodule "bundle/languageclient"]
 	path = bundle/languageclient
 	url = https://github.com/autozimu/LanguageClient-neovim.git
+	ignore = dirty
