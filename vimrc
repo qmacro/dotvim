@@ -102,3 +102,7 @@ nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
 nnoremap <leader><tab> :tabnext<cr>
+
+" To enable project/folder specific vimrc settings
+" (see https://andrew.stwrt.ca/posts/project-specific-vimrc/)
+set exrc
