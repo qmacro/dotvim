@@ -47,3 +47,6 @@
 	path = bundle/languageclient
 	url = https://github.com/autozimu/LanguageClient-neovim.git
 	ignore = dirty
+[submodule "bundle/fzf"]
+	path = bundle/fzf
+	url = https://github.com/junegunn/fzf.git
