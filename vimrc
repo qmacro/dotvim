@@ -56,9 +56,6 @@ map <C-l> <C-w>l
 " Remap Esc to save wear on left hand!
 :inoremap jk <esc>
 
-" When in insert mode, jump to next <++> marker (see helpers later)
-inoremap qq <Esc>/<++><CR>"_c4l
-
 " Edit and source .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :so $MYVIMRC<cr>
@@ -70,22 +67,12 @@ autocmd BufWritePre * %s/\s\+$//e
 set listchars=tab:▸·,eol:¬
 nnoremap <leader>l :set list!<cr>
 
-" Markdown helpers
-autocmd Filetype markdown inoremap ,n ---<Enter><Enter>
-autocmd Filetype markdown inoremap ,b ****<++><Esc>F*hi
-autocmd Filetype markdown inoremap ,s ~~~~<++><Esc>F~hi
-autocmd Filetype markdown inoremap ,e **<++><Esc>F*i
-autocmd Filetype markdown inoremap ,i ![](<++>)<++><Esc>F[a
-autocmd Filetype markdown inoremap ,a [](<++>)<++><Esc>F[a
-autocmd Filetype markdown inoremap ,1 #<Space><Enter><++><Esc>kA
-autocmd Filetype markdown inoremap ,2 ##<Space><Enter><++><Esc>kA
-autocmd Filetype markdown inoremap ,3 ###<Space><Enter><++><Esc>kA
-
 " Abbreviations
 iabbrev scp SAP Cloud Platform
 iabbrev s4h S/4HANA
 iabbrev sbs side-by-side
 iabbrev s4s S/4HANA Cloud SDK
+iabbrev hosd https://bit.ly/handsonsapdev
 
 " To enable project/folder specific vimrc settings
 " (see https://andrew.stwrt.ca/posts/project-specific-vimrc/)
@@ -99,3 +86,32 @@ set signcolumn=yes
 let g:LanguageClient_serverCommands = {
 	\ 'cds': [expand('~/.vim/bundle/languageclient/startcdslsp')]
 	\ }
+
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> fr :call LanguageClient#textDocument_references()<CR>
+
+set nocursorline
+set nocursorcolumn
+highlight CursorLine cterm=NONE ctermbg=darkgrey ctermfg=NONE guibg=darkgrey guifg=NONE
+highlight CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=NONE guibg=darkgrey guifg=NONE
+
+fu! ToggleCrosshairs ()
+  if &cursorline && &cursorcolumn
+    set nocursorline
+    set nocursorcolumn
+  else
+    set cursorline
+    set cursorcolumn
+  endif
+endfunction
+
+map <silent><leader>c :call ToggleCrosshairs()<cr>
+
+" Change Esc key to give me a backtick when in insert mode and writing markdown
+autocmd FileType markdown inoremap <esc> `
+autocmd FileType markdown inoremap ppp :point_right:<space>
+
+" Quick insertion of a GitHub issues style checkbox item (- [ ] )
+autocmd FileType markdown inoremap ii -<space>[<space>]<space>
+
+
