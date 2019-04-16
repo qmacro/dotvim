@@ -53,9 +53,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Remap Esc to save wear on left hand!
-:inoremap jk <esc>
-
 " Edit and source .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :so $MYVIMRC<cr>
@@ -107,11 +104,8 @@ endfunction
 
 map <silent><leader>c :call ToggleCrosshairs()<cr>
 
-" Change Esc key to give me a backtick when in insert mode and writing markdown
-autocmd FileType markdown inoremap <esc> `
 autocmd FileType markdown inoremap ppp :point_right:<space>
 
 " Quick insertion of a GitHub issues style checkbox item (- [ ] )
 autocmd FileType markdown inoremap ii -<space>[<space>]<space>
-
 
