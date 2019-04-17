@@ -76,16 +76,6 @@ iabbrev hosd https://bit.ly/handsonsapdev
 set exrc
 
 set runtimepath+=/usr/local/bin
-set runtimepath+=~/.vim/bundle/languageclient
-set hidden
-autocmd BufRead,BufNewFile *.cds setfiletype cds
-set signcolumn=yes
-let g:LanguageClient_serverCommands = {
-	\ 'cds': [expand('~/.vim/bundle/languageclient/startcdslsp')]
-	\ }
-
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> fr :call LanguageClient#textDocument_references()<CR>
 
 set nocursorline
 set nocursorcolumn
